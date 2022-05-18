@@ -16,7 +16,7 @@ jobs:
         - annotate/debug
         - annotate/step
         - annotate/send
-        - annotate/dashbaord
+        - annotate/dashboard
 workflows:
   test-deploy:
     jobs:
