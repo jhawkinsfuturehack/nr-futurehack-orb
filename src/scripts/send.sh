@@ -23,9 +23,9 @@ curl -vvv -k -H "Content-Type: application/json" \
            }] 
     }]"
 
-echo "${CURRENT_TIME}|${PARAM_TRACE_ID}" >> trace.log
+echo "${CURRENT_TIME}|${PARAM_TRACE_ID}" >> /tmp/trace.log
 
-cat trace.log
+cat /tmp/trace.log
 
 # curl -i -H 'Content-Type: application/json' \
 #     -H "Api-Key: ${NR_LICENSE_KEY}" \
