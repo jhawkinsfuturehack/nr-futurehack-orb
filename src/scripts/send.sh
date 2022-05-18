@@ -1,7 +1,9 @@
 #!/bin/bash
 echo Step: "${PARAM_NAME}"
 
-TRACE_STAMP="{'name':'${PARAM_TRACE_ID}','time':${CURRENT_TIME}}"
+CURRENT_TIME=$(($(date +%s%N)/1000000))
+
+TRACE_STAMP="{'name':'end','time':${CURRENT_TIME}}"
 
 if [ -z "$TRACE_COLLECTION" ]
 then
