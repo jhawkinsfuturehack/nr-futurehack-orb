@@ -1,7 +1,7 @@
 #!/bin/bash
 echo Step: "${PARAM_NAME}"
 
-CURRENT_TIME=$(date +%s%N)
+CURRENT_TIME=$(date +%s)
 
 curl -vvv -k -H "Content-Type: application/json" \
 -H "Api-Key: ${NR_LICENSE_KEY}" \
@@ -11,7 +11,8 @@ curl -vvv -k -H "Content-Type: application/json" \
            'name':'build_step_time', 
            'type':'gauge', 
            'value':1, 
-           'timestamp':${CURRENT_TIME}, 
+           'timestamp':${CURRENT_TIME},
+           'interval.ms': 000000,
            'attributes':{
                'project': '${CIRCLE_PROJECT_REPONAME}', 
                'branch': '${CIRCLE_BRANCH}', 

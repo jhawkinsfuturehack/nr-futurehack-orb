@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Step: "${PARAM_TRACE_ID}"
-CURRENT_TIME=$(date +%s%N)
+CURRENT_TIME=$(date +%s)
 
 curl -vvv -k -H "Content-Type: application/json" \
 -H "Api-Key: ${NR_LICENSE_KEY}" \
@@ -11,6 +11,7 @@ curl -vvv -k -H "Content-Type: application/json" \
            'type':'gauge', 
            'value':1, 
            'timestamp':${CURRENT_TIME}, 
+           'interval.ms': 000000,
            'attributes':{
                'project': '${CIRCLE_PROJECT_REPONAME}', 
                'branch': '${CIRCLE_BRANCH}', 
