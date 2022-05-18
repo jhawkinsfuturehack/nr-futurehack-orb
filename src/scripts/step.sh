@@ -1,4 +1,4 @@
 #!/bin/bash
-echo Step: "${PARAM_NAME}"
+echo Step: "${PARAM_TRACE_ID}"
 date
 
