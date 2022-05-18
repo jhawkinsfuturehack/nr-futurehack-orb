@@ -2,6 +2,10 @@
 declare -a trace_array
 declare -a log_array
 
+CURRENT_TIME=$(date +%s)
+
+echo "${CURRENT_TIME}|Build Finished" >> /tmp/trace.log
+
 while read -r p; do
   echo "$p"
   ts=$(echo $p | cut -d "|" -f 1)
@@ -36,7 +40,7 @@ do
     -X POST https://metric-api.newrelic.com/metric/v1 \
     --data "[{ 
             \"metrics\":[{ 
-            \"name\":\"elapsed_build_time\", 
+            \"name\":\"elapsed\", 
             \"type\":\"gauge\", 
             \"value\": ${trace_array[$i]}, 
             \"timestamp\":${CURRENT_TIME}, 
