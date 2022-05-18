@@ -21,3 +21,5 @@ curl -i -H 'Content-Type: application/json' \
     -X POST \
     -d '[
     ]' 'https://trace-api.newrelic.com/trace/v1'
+
+source $BASH_ENV

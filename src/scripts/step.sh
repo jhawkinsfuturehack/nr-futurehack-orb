@@ -10,3 +10,5 @@ then
 else
       export TRACE_COLLECTION="${TRACE_COLLECTION},${TRACE_STAMP}" >> $BASH_ENV
 fi
+
+source $BASH_ENV
