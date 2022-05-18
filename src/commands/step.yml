@@ -1,0 +1,14 @@
+description: >
+  This command captures build step innformation for the trace.
+
+parameters:
+  name:
+    type: string
+    default: "<Undefined>"
+    description: "Name of the build step"
+steps:
+  - run:
+      environment:
+        PARAM_TO: <<parameters.name>>
+      name: Capture Trace
+      command: <<include(scripts/step.sh)>>

@@ -1,0 +1,7 @@
+description: >
+  Send the Trace to New Relic
+
+steps:
+  - run:
+      name: Send Trace
+      command: <<include(scripts/send.sh)>>
