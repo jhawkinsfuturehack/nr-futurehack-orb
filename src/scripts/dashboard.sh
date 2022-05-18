@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "TODO: GENERATE BUILD DASHBOARD"

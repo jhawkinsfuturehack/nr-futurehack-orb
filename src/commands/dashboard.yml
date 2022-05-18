@@ -1,0 +1,7 @@
+description: >
+  Generates a build dashboard for this circleci build.
+
+steps:
+  - run:
+      name: Generate Build Dashboard
+      command: <<include(scripts/dashboard.sh)>>
