@@ -2,7 +2,7 @@
 declare -a trace_array
 declare -a log_array
 
-while read p; do
+while read -r p; do
   echo "$p"
   ts=$(echo $p | cut -d "|" -f 1)
   log=$(echo $p | cut -d "|" -f 2)
