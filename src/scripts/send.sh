@@ -23,6 +23,10 @@ curl -vvv -k -H "Content-Type: application/json" \
            }] 
     }]"
 
+echo "${CURRENT_TIME}|${PARAM_TRACE_ID}" >> trace.log
+
+cat trace.log
+
 # curl -i -H 'Content-Type: application/json' \
 #     -H "Api-Key: ${NR_LICENSE_KEY}" \
 #     -H 'Data-Format: zipkin' \

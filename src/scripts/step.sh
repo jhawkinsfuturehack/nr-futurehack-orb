@@ -21,3 +21,5 @@ curl -vvv -k -H "Content-Type: application/json" \
                } 
            }] 
     }]"
+
+echo "${CURRENT_TIME}|${PARAM_TRACE_ID}" >> trace.log
