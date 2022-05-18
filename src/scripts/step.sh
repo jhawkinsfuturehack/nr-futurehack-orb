@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Step: "${PARAM_TRACE_ID}"
-CURRENT_TIME=$(($(date +%s%N | cut -b1-13))
+CURRENT_TIME=$(date +%s%N)
 
 curl -vvv -k -H "Content-Type: application/json" \
 -H "Api-Key: ${NR_LICENSE_KEY}" \
