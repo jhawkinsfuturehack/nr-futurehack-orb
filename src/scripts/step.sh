@@ -1,4 +1,12 @@
 #!/bin/bash
 echo Step: "${PARAM_TRACE_ID}"
-date
+CURRENT_TIME=$(($(date +%s%N)/1000000))
 
+TRACE_STAMP="{'name':'${PARAM_TRACE_ID}','time':${CURRENT_TIME}}"
+
+if [ -z "$TRACE_COLLECTION" ]
+then
+      export TRACE_COLLECTION="${TRACE_STAMP}"
+else
+      export TRACE_COLLECTION="${TRACE_COLLECTION},${TRACE_STAMP}"
+fi

@@ -1,6 +1,16 @@
 #!/bin/bash
 echo Step: "${PARAM_NAME}"
-date
+
+TRACE_STAMP="{'name':'${PARAM_TRACE_ID}','time':${CURRENT_TIME}}"
+
+if [ -z "$TRACE_COLLECTION" ]
+then
+      export TRACE_COLLECTION="${TRACE_STAMP}"
+else
+      export TRACE_COLLECTION="${TRACE_COLLECTION},${TRACE_STAMP}"
+fi
+
+echo "Trace: ${TRACE_COLLECTION}"
 
 curl -i -H 'Content-Type: application/json' \
     -H "Api-Key: ${NR_LICENSE_KEY}" \
