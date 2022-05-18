@@ -26,7 +26,7 @@ done </tmp/trace.log
 CURRENT_TIME=$(date +%s)
 
 trace_array_length=${#trace_array[@]}
-for (( i=0; i<${trace_array_length}; i++ ));
+for (( i=0; i<trace_array_length; i++ ));
 do
   echo "index: $i, elapsed: ${trace_array[$i]}"
   echo "index: $i, value: ${log_array[$i]}"
