@@ -6,18 +6,18 @@ curl -vvv -k -H "Content-Type: application/json" \
 -H "Api-Key: ${NR_LICENSE_KEY}" \
 -X POST https://metric-api.newrelic.com/metric/v1 \
 --data "[{ 
-        'metrics':[{ 
-           'name':'build_step_time', 
-           'type':'gauge', 
-           'value':1, 
-           'timestamp':${CURRENT_TIME}, 
-           'interval.ms': 000000,
-           'attributes':{
-               'project': '${CIRCLE_PROJECT_REPONAME}', 
-               'branch': '${CIRCLE_BRANCH}', 
-               'trace_id': '${PARAM_TRACE_ID}',
-               'step':'${CIRCLE_NODE_INDEX}',
-               'build_number':'${CIRCLE_BUILD_NUM}'
+        \"metrics\":[{ 
+           \"name\":\"build_step_time\", 
+           \"type\":\"gauge\", 
+           \"value\":1, 
+           \"timestamp\":${CURRENT_TIME}, 
+           \"interval.ms\": 000000,
+           \"attributes\":{
+               \"project\": \"${CIRCLE_PROJECT_REPONAME}\", 
+               \"branch\": \"${CIRCLE_BRANCH}\", 
+               \"trace_id\": \"${PARAM_TRACE_ID}\",
+               \"step\":\"${CIRCLE_NODE_INDEX}\",
+               \"build_number\":\"${CIRCLE_BUILD_NUM}\"
                } 
            }] 
     }]"
