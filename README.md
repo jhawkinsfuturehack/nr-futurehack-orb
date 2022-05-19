@@ -6,4 +6,4 @@ This project/orb enables you to quickly and easily add build annotations to your
 
 To learn more, visit the demo project: [here](https://github.com/jhawkinsfuturehack/nr-orb-demo)
 
-
+![Dashboard Example](https://github.com/jhawkinsfuturehack/nr-orb-demo/raw/main/images/Test_Build_Dashboard___New_Relic_One.png)
